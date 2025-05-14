@@ -23,7 +23,18 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `body {
     background-color: rgb(247, 247, 226);
-}`, "",{"version":3,"sources":["webpack://./src/assets/styles.css"],"names":[],"mappings":"AAAA;IACI,oCAAoC;AACxC","sourcesContent":["body {\n    background-color: rgb(247, 247, 226);\n}"],"sourceRoot":""}]);
+}
+
+#banner {
+    width: 100%;
+    height: 600px;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles.css"],"names":[],"mappings":"AAAA;IACI,oCAAoC;AACxC;;AAEA;IACI,WAAW;IACX,aAAa;AACjB;;AAEA;IACI,eAAe;IACf,YAAY;IACZ,iBAAiB;AACrB","sourcesContent":["body {\n    background-color: rgb(247, 247, 226);\n}\n\n#banner {\n    width: 100%;\n    height: 600px;\n}\n\n.hero-img {\n    max-width: 100%;\n    height: auto;\n    object-fit: cover;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

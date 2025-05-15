@@ -6,10 +6,15 @@
 
 html {
     font-size: 18px;
+    --background-color: #f0f0f0;
+    --font-color: #403C01;
+    --main-color: #8C031C;
+    --secondary-color: #038C1B;
 }
 
 body {
-    background-color: rgb(247, 247, 226);
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 p {
@@ -26,7 +31,8 @@ header {
 }
 
 .logo {
-    font-size: 3rem;
+    padding-top: 20px;
+    font-size: 2.5rem;
 }
 
 nav {
@@ -39,18 +45,23 @@ button {
     width: 100px;
     height: 40px;
     background: none;
-    border: 2px dashed red;
+    border: 2px dashed var(--main-color);
     border-radius: 3px;
 }
 
 button:hover {
-    background-color: red;
-    color: whitesmoke;
+    background-color: var(--main-color);
+    color: var(--background-color);
 }
 
 button.active {
     font-weight: bold;
     text-decoration: underline;
+    border: 2px dashed var(--secondary-color);
+}
+
+button.active:hover {
+    border: none;
 }
 
 #banner {
@@ -58,6 +69,13 @@ button.active {
     width: 100%;
     height: 300px;
 }
+
+#banner h2, #banner p {
+    margin-top: 40px;
+    padding-left: 40px;
+}
+
+
 
 .hero-img {
     height: 600px;
@@ -119,4 +137,33 @@ button.active {
     width: 100%;
     height: auto;
     border-radius: 3%;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-card {
+    width: 40%;
+    min-width: 300px;
+    margin: 4em;
+    border: 2px solid var(--font-color);
+    padding: 2em;
+    border-radius: 3px;
+}
+
+.menu-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu-price {
+    text-align: right;
 }

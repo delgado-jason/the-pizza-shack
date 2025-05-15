@@ -12,8 +12,14 @@ body {
     background-color: rgb(247, 247, 226);
 }
 
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
 header {
-    padding: 20px;
+    padding: 20px 4em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,6 +46,11 @@ button {
 button:hover {
     background-color: red;
     color: whitesmoke;
+}
+
+button.active {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 #banner {
@@ -77,4 +88,35 @@ button:hover {
     color: red;
     opacity: 1.0;
     text-align: center;
+}
+
+.about-headline {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.subtitle {
+    color: red;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 4em;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-img-container {
+    max-width: 20%;
+    min-width: 245px;
+}
+
+.about-img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 3%;
 }

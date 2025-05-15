@@ -21,20 +21,128 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `body {
+___CSS_LOADER_EXPORT___.push([module.id, `*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
     background-color: rgb(247, 247, 226);
 }
 
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+header {
+    padding: 20px 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 3rem;
+}
+
+nav {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background: none;
+    border: 2px dashed red;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: red;
+    color: whitesmoke;
+}
+
+button.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 #banner {
+    position: relative;
     width: 100%;
-    height: 600px;
+    height: 300px;
 }
 
 .hero-img {
-    max-width: 100%;
-    height: auto;
+    height: 600px;
+    width: 100%;
     object-fit: cover;
-}`, "",{"version":3,"sources":["webpack://./src/assets/styles.css"],"names":[],"mappings":"AAAA;IACI,oCAAoC;AACxC;;AAEA;IACI,WAAW;IACX,aAAa;AACjB;;AAEA;IACI,eAAe;IACf,YAAY;IACZ,iBAAiB;AACrB","sourcesContent":["body {\n    background-color: rgb(247, 247, 226);\n}\n\n#banner {\n    width: 100%;\n    height: 600px;\n}\n\n.hero-img {\n    max-width: 100%;\n    height: auto;\n    object-fit: cover;\n}"],"sourceRoot":""}]);
+}
+
+.cta-card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: whitesmoke;
+    padding: 120px 75px;
+    opacity: .7;
+    margin: 50px 50px 0 0;
+    border: 4px dashed red;
+    border-radius: 3px;
+}
+
+.cta-card h2 {
+    font-size: 4rem;
+    opacity: 1.0;
+}
+
+.cta-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+    opacity: 1.0;
+    text-align: center;
+}
+
+.about-headline {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.subtitle {
+    color: red;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 4em;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-img-container {
+    max-width: 20%;
+    min-width: 245px;
+}
+
+.about-img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 3%;
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,oCAAoC;AACxC;;AAEA;IACI,eAAe;IACf,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,UAAU;IACV,aAAa;IACb,8BAA8B;AAClC;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,gBAAgB;IAChB,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;IACI,qBAAqB;IACrB,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;IACjB,0BAA0B;AAC9B;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,QAAQ;IACR,4BAA4B;IAC5B,mBAAmB;IACnB,WAAW;IACX,qBAAqB;IACrB,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;IACI,eAAe;IACf,YAAY;AAChB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,UAAU;IACV,YAAY;IACZ,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,iBAAiB;AACrB","sourcesContent":["*, ::before, ::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    font-size: 18px;\n}\n\nbody {\n    background-color: rgb(247, 247, 226);\n}\n\np {\n    font-size: 1rem;\n    margin-bottom: 20px;\n    line-height: 1.5;\n}\n\nheader {\n    padding: 20px 4em;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.logo {\n    font-size: 3rem;\n}\n\nnav {\n    width: 25%;\n    display: flex;\n    justify-content: space-between;\n}\n\nbutton {\n    width: 100px;\n    height: 40px;\n    background: none;\n    border: 2px dashed red;\n    border-radius: 3px;\n}\n\nbutton:hover {\n    background-color: red;\n    color: whitesmoke;\n}\n\nbutton.active {\n    font-weight: bold;\n    text-decoration: underline;\n}\n\n#banner {\n    position: relative;\n    width: 100%;\n    height: 300px;\n}\n\n.hero-img {\n    height: 600px;\n    width: 100%;\n    object-fit: cover;\n}\n\n.cta-card {\n    position: absolute;\n    top: 0;\n    right: 0;\n    background-color: whitesmoke;\n    padding: 120px 75px;\n    opacity: .7;\n    margin: 50px 50px 0 0;\n    border: 4px dashed red;\n    border-radius: 3px;\n}\n\n.cta-card h2 {\n    font-size: 4rem;\n    opacity: 1.0;\n}\n\n.cta-card p {\n    font-size: 1.5rem;\n    font-weight: bold;\n    color: red;\n    opacity: 1.0;\n    text-align: center;\n}\n\n.about-headline {\n    margin-top: 40px;\n    text-align: center;\n}\n\n.subtitle {\n    color: red;\n}\n\n.about-section {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin: 40px 4em;\n}\n\n.about-content {\n    max-width: 50%;\n}\n\n.about-img-container {\n    max-width: 20%;\n    min-width: 245px;\n}\n\n.about-img-container img {\n    width: 100%;\n    height: auto;\n    border-radius: 3%;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -427,6 +535,26 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/assets/images/hero.jpg":
+/*!************************************!*\
+  !*** ./src/assets/images/hero.jpg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "a01cb8cba7b0ddc5078b.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/pizza-owner.jpg":
+/*!*******************************************!*\
+  !*** ./src/assets/images/pizza-owner.jpg ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "2bbe758396423febd847.jpg";
+
+/***/ }),
+
 /***/ "./src/assets/styles.css":
 /*!*******************************!*\
   !*** ./src/assets/styles.css ***!
@@ -476,6 +604,168 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_styles_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_styles_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_styles_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
+
+/***/ }),
+
+/***/ "./src/modules/aboutPage.js":
+/*!**********************************!*\
+  !*** ./src/modules/aboutPage.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helper */ "./src/modules/helper.js");
+/* harmony import */ var _assets_images_pizza_owner_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images/pizza-owner.jpg */ "./src/assets/images/pizza-owner.jpg");
+
+
+
+
+function aboutPage() {
+
+    const aboutBtn = document.getElementById('aboutBtn');
+
+    // Remove active class from other button
+    (0,_helper__WEBPACK_IMPORTED_MODULE_0__.removeActive)(aboutBtn.id);
+
+    // Add class active to about button
+    aboutBtn.classList.add('active');
+
+    // Get the main content DOM element
+    const mainContent = document.getElementById('content');
+    mainContent.innerHTML = `
+        <h1 class="about-headline">Why We Do What We Do</h1>
+        <section class="about-section">
+            <div class="about-content">
+                <h2>42 Years In The Biz and Still Rolling</h2>
+                <p class="subtitle">The dough that is</p>
+                <p class="about-description">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+                </p>
+                <p class="about-description">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+                </p>
+                <p class="about-description">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+                </p>
+            </div>
+            <div class="about-img-container">
+                <img src="${_assets_images_pizza_owner_jpg__WEBPACK_IMPORTED_MODULE_1__}" />
+            </div>
+        </section>
+    `;
+
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (aboutPage);
+
+/***/ }),
+
+/***/ "./src/modules/helper.js":
+/*!*******************************!*\
+  !*** ./src/modules/helper.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   removeActive: () => (/* binding */ removeActive)
+/* harmony export */ });
+
+
+
+// Removes active class from button
+function removeActive(currentBtnId) {
+
+    // remove active class from other btn
+    const btns = document.getElementsByTagName('button');
+    for (let i = 0; i < btns.length; i++) {
+        if (btns[i].id !== `${currentBtnId}`) {
+            btns[i].classList.remove('active');
+        }
+    }
+
+}
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/modules/homePage.js":
+/*!*********************************!*\
+  !*** ./src/modules/homePage.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _assets_images_hero_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/images/hero.jpg */ "./src/assets/images/hero.jpg");
+/* harmony import */ var _helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helper */ "./src/modules/helper.js");
+
+
+
+
+
+function homePage() {
+
+    
+    const homeBtn = document.getElementById('homeBtn');
+
+    // Remove active class from other button
+    (0,_helper__WEBPACK_IMPORTED_MODULE_1__.removeActive)(homeBtn.id);
+
+    // Add active class to Home button
+    homeBtn.classList.add('active');
+
+    // Get main content DOM element
+    const mainContent = document.getElementById('content');
+
+    mainContent.innerHTML = `
+        <div id="banner">
+            <img src="${_assets_images_hero_jpg__WEBPACK_IMPORTED_MODULE_0__}" alt="Picture of a delicious pizza." id="hero" class="hero-img">
+ 
+            <div id="ctaCard" class="cta-card">
+                <h2>$5 OFF</h2>
+                <p>Any Large Pizza</p>
+            </div>
+
+            <h2>Your Pizza, The Way You Want It</h2>
+            <p>All of our pizza comes to you fresh straight from the oven with super fast delivery to ensure freshness. If it isn't to you in 10 minutes, it's on us!</p>
+        </div>
+    `;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (homePage);
+
+/***/ }),
+
+/***/ "./src/modules/loadPage.js":
+/*!*********************************!*\
+  !*** ./src/modules/loadPage.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function loadPage (callback) {
+
+    // Add an event listener to detect when the 
+    // page loads
+    document.addEventListener('DOMContentLoaded', e => {
+        callback();
+    })
+
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadPage);
 
 /***/ })
 
@@ -530,6 +820,18 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -546,6 +848,29 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -560,7 +885,24 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/styles.css */ "./src/assets/styles.css");
+/* harmony import */ var _modules_loadPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/loadPage */ "./src/modules/loadPage.js");
+/* harmony import */ var _modules_homePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/homePage */ "./src/modules/homePage.js");
+/* harmony import */ var _modules_aboutPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/aboutPage */ "./src/modules/aboutPage.js");
 
+
+
+
+
+(0,_modules_loadPage__WEBPACK_IMPORTED_MODULE_1__["default"])(_modules_homePage__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+
+const aboutBtn = document.getElementById('aboutBtn');
+const homeBtn = document.getElementById('homeBtn');
+
+// Event Listeners
+aboutBtn.addEventListener('click', _modules_aboutPage__WEBPACK_IMPORTED_MODULE_3__["default"])
+
+homeBtn.addEventListener('click', _modules_homePage__WEBPACK_IMPORTED_MODULE_2__["default"]);
 })();
 
 /******/ })()

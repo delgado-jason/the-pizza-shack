@@ -29,10 +29,15 @@ ___CSS_LOADER_EXPORT___.push([module.id, `*, ::before, ::after {
 
 html {
     font-size: 18px;
+    --background-color: #f0f0f0;
+    --font-color: #403C01;
+    --main-color: #8C031C;
+    --secondary-color: #038C1B;
 }
 
 body {
-    background-color: rgb(247, 247, 226);
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 p {
@@ -62,18 +67,23 @@ button {
     width: 100px;
     height: 40px;
     background: none;
-    border: 2px dashed red;
+    border: 2px dashed var(--main-color);
     border-radius: 3px;
 }
 
 button:hover {
-    background-color: red;
-    color: whitesmoke;
+    background-color: var(--main-color);
+    color: var(--background-color);
 }
 
 button.active {
     font-weight: bold;
     text-decoration: underline;
+    border: 2px dashed var(--secondary-color);
+}
+
+button.active:hover {
+    border: none;
 }
 
 #banner {
@@ -81,6 +91,13 @@ button.active {
     width: 100%;
     height: 300px;
 }
+
+#banner h2, #banner p {
+    margin-top: 40px;
+    padding-left: 40px;
+}
+
+
 
 .hero-img {
     height: 600px;
@@ -142,7 +159,36 @@ button.active {
     width: 100%;
     height: auto;
     border-radius: 3%;
-}`, "",{"version":3,"sources":["webpack://./src/assets/styles.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,oCAAoC;AACxC;;AAEA;IACI,eAAe;IACf,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,UAAU;IACV,aAAa;IACb,8BAA8B;AAClC;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,gBAAgB;IAChB,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;IACI,qBAAqB;IACrB,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;IACjB,0BAA0B;AAC9B;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,QAAQ;IACR,4BAA4B;IAC5B,mBAAmB;IACnB,WAAW;IACX,qBAAqB;IACrB,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;IACI,eAAe;IACf,YAAY;AAChB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,UAAU;IACV,YAAY;IACZ,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,iBAAiB;AACrB","sourcesContent":["*, ::before, ::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    font-size: 18px;\n}\n\nbody {\n    background-color: rgb(247, 247, 226);\n}\n\np {\n    font-size: 1rem;\n    margin-bottom: 20px;\n    line-height: 1.5;\n}\n\nheader {\n    padding: 20px 4em;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.logo {\n    font-size: 3rem;\n}\n\nnav {\n    width: 25%;\n    display: flex;\n    justify-content: space-between;\n}\n\nbutton {\n    width: 100px;\n    height: 40px;\n    background: none;\n    border: 2px dashed red;\n    border-radius: 3px;\n}\n\nbutton:hover {\n    background-color: red;\n    color: whitesmoke;\n}\n\nbutton.active {\n    font-weight: bold;\n    text-decoration: underline;\n}\n\n#banner {\n    position: relative;\n    width: 100%;\n    height: 300px;\n}\n\n.hero-img {\n    height: 600px;\n    width: 100%;\n    object-fit: cover;\n}\n\n.cta-card {\n    position: absolute;\n    top: 0;\n    right: 0;\n    background-color: whitesmoke;\n    padding: 120px 75px;\n    opacity: .7;\n    margin: 50px 50px 0 0;\n    border: 4px dashed red;\n    border-radius: 3px;\n}\n\n.cta-card h2 {\n    font-size: 4rem;\n    opacity: 1.0;\n}\n\n.cta-card p {\n    font-size: 1.5rem;\n    font-weight: bold;\n    color: red;\n    opacity: 1.0;\n    text-align: center;\n}\n\n.about-headline {\n    margin-top: 40px;\n    text-align: center;\n}\n\n.subtitle {\n    color: red;\n}\n\n.about-section {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin: 40px 4em;\n}\n\n.about-content {\n    max-width: 50%;\n}\n\n.about-img-container {\n    max-width: 20%;\n    min-width: 245px;\n}\n\n.about-img-container img {\n    width: 100%;\n    height: auto;\n    border-radius: 3%;\n}"],"sourceRoot":""}]);
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-card {
+    width: 40%;
+    min-width: 300px;
+    margin: 4em;
+    border: 2px solid var(--font-color);
+    padding: 2em;
+    border-radius: 3px;
+}
+
+.menu-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu-price {
+    text-align: right;
+}`, "",{"version":3,"sources":["webpack://./src/assets/styles.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B;;AAEA;IACI,eAAe;IACf,2BAA2B;IAC3B,qBAAqB;IACrB,qBAAqB;IACrB,0BAA0B;AAC9B;;AAEA;IACI,yCAAyC;IACzC,wBAAwB;AAC5B;;AAEA;IACI,eAAe;IACf,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,UAAU;IACV,aAAa;IACb,8BAA8B;AAClC;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,gBAAgB;IAChB,oCAAoC;IACpC,kBAAkB;AACtB;;AAEA;IACI,mCAAmC;IACnC,8BAA8B;AAClC;;AAEA;IACI,iBAAiB;IACjB,0BAA0B;IAC1B,yCAAyC;AAC7C;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,aAAa;AACjB;;AAEA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;;;;AAIA;IACI,aAAa;IACb,WAAW;IACX,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,QAAQ;IACR,4BAA4B;IAC5B,mBAAmB;IACnB,WAAW;IACX,qBAAqB;IACrB,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;IACI,eAAe;IACf,YAAY;AAChB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,UAAU;IACV,YAAY;IACZ,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,gBAAgB;AACpB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,kBAAkB;IAClB,mBAAmB;AACvB;;AAEA;IACI,UAAU;IACV,gBAAgB;IAChB,WAAW;IACX,mCAAmC;IACnC,YAAY;IACZ,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,8BAA8B;AAClC;;AAEA;IACI,iBAAiB;AACrB","sourcesContent":["*, ::before, ::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml {\n    font-size: 18px;\n    --background-color: #f0f0f0;\n    --font-color: #403C01;\n    --main-color: #8C031C;\n    --secondary-color: #038C1B;\n}\n\nbody {\n    background-color: var(--background-color);\n    color: var(--font-color);\n}\n\np {\n    font-size: 1rem;\n    margin-bottom: 20px;\n    line-height: 1.5;\n}\n\nheader {\n    padding: 20px 4em;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.logo {\n    font-size: 3rem;\n}\n\nnav {\n    width: 25%;\n    display: flex;\n    justify-content: space-between;\n}\n\nbutton {\n    width: 100px;\n    height: 40px;\n    background: none;\n    border: 2px dashed var(--main-color);\n    border-radius: 3px;\n}\n\nbutton:hover {\n    background-color: var(--main-color);\n    color: var(--background-color);\n}\n\nbutton.active {\n    font-weight: bold;\n    text-decoration: underline;\n    border: 2px dashed var(--secondary-color);\n}\n\nbutton.active:hover {\n    border: none;\n}\n\n#banner {\n    position: relative;\n    width: 100%;\n    height: 300px;\n}\n\n#banner h2, #banner p {\n    margin-top: 40px;\n    padding-left: 40px;\n}\n\n\n\n.hero-img {\n    height: 600px;\n    width: 100%;\n    object-fit: cover;\n}\n\n.cta-card {\n    position: absolute;\n    top: 0;\n    right: 0;\n    background-color: whitesmoke;\n    padding: 120px 75px;\n    opacity: .7;\n    margin: 50px 50px 0 0;\n    border: 4px dashed red;\n    border-radius: 3px;\n}\n\n.cta-card h2 {\n    font-size: 4rem;\n    opacity: 1.0;\n}\n\n.cta-card p {\n    font-size: 1.5rem;\n    font-weight: bold;\n    color: red;\n    opacity: 1.0;\n    text-align: center;\n}\n\n.about-headline {\n    margin-top: 40px;\n    text-align: center;\n}\n\n.subtitle {\n    color: red;\n}\n\n.about-section {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin: 40px 4em;\n}\n\n.about-content {\n    max-width: 50%;\n}\n\n.about-img-container {\n    max-width: 20%;\n    min-width: 245px;\n}\n\n.about-img-container img {\n    width: 100%;\n    height: auto;\n    border-radius: 3%;\n}\n\n#menu {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n#menu h2 {\n    text-align: center;\n    margin-bottom: 40px;\n}\n\n.menu-card {\n    width: 40%;\n    min-width: 300px;\n    margin: 4em;\n    border: 2px solid var(--font-color);\n    padding: 2em;\n    border-radius: 3px;\n}\n\n.menu-content {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n}\n\n.menu-price {\n    text-align: right;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -767,6 +813,61 @@ function loadPage (callback) {
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadPage);
 
+/***/ }),
+
+/***/ "./src/modules/menuPage.js":
+/*!*********************************!*\
+  !*** ./src/modules/menuPage.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helper */ "./src/modules/helper.js");
+
+
+
+function menuPage() {
+
+    // Get the menu button element
+    menuBtn = document.getElementById('menuBtn')
+
+    // Remove active class from other button
+    ;(0,_helper__WEBPACK_IMPORTED_MODULE_0__.removeActive)(menuBtn.id);
+
+    // Add class active to menu button
+    menuBtn.classList.add('active');
+
+    // Get the main content DOM element
+    const mainContent = document.getElementById('content');
+    mainContent.innerHTML = `
+        <section id="menu">
+            <h1>Our Cheesy Menu</h1>
+            <div class="menu-card">
+                <h2>Fresh Pizza</h2>
+                <div class="menu-content">
+                    <p class="menu-item">BBQ Chicken</p>
+                    <p class="menu-price">$19.99</p>
+                    <p class="menu-item">Prociutto</p>
+                    <p class="menu-price">$19.99</p>
+                    <p class="menu-item">Margherita</p>
+                    <p class="menu-price">$19.99</p>
+                    <p class="menu-item">4 Stagioni</p>
+                    <p class="menu-price">$19.99</p>
+                    <p class="menu-item">Vegetariana</p>
+                    <p class="menu-price">$19.99</p>
+                    <p class="menu-item">Pepperoni</p>
+                    <p class="menu-price">$19.99</p>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuPage);
+
 /***/ })
 
 /******/ 	});
@@ -888,6 +989,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_loadPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/loadPage */ "./src/modules/loadPage.js");
 /* harmony import */ var _modules_homePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/homePage */ "./src/modules/homePage.js");
 /* harmony import */ var _modules_aboutPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/aboutPage */ "./src/modules/aboutPage.js");
+/* harmony import */ var _modules_menuPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/menuPage */ "./src/modules/menuPage.js");
+
 
 
 
@@ -895,14 +998,15 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_modules_loadPage__WEBPACK_IMPORTED_MODULE_1__["default"])(_modules_homePage__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
-
+// Nav buttons
 const aboutBtn = document.getElementById('aboutBtn');
 const homeBtn = document.getElementById('homeBtn');
+const menuBtn = document.getElementById('menuBtn');
 
 // Event Listeners
-aboutBtn.addEventListener('click', _modules_aboutPage__WEBPACK_IMPORTED_MODULE_3__["default"])
-
+aboutBtn.addEventListener('click', _modules_aboutPage__WEBPACK_IMPORTED_MODULE_3__["default"]);
 homeBtn.addEventListener('click', _modules_homePage__WEBPACK_IMPORTED_MODULE_2__["default"]);
+menuBtn.addEventListener('click', _modules_menuPage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 })();
 
 /******/ })()
